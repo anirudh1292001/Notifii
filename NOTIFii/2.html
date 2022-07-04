@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="1.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">NOTIFii</span>
+                    <span class="profession">We Care</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="2.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="5.html">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="8.html">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">About Us</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="3.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Timeline</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="6.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Posts</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="4.html">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Our Team</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="9.html">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Policies</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="7.html">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Contact us</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home2">
+        <div class="search-box1">
+            <input class="search-txt" type="text" name="" placeholder="Type to search any location">
+            <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+
+
+
+        <div class="slidershow middle">
+
+            <div class="slides">
+              <input type="radio" name="r" id="r1" checked>
+              <input type="radio" name="r" id="r2">
+              <input type="radio" name="r" id="r3">
+              
+              <div class="slide s1">
+                <img src="1.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="2.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="3.jpg" alt="">
+              </div>
+              
+            </div>
+      
+            <div class="navigation">
+              <label for="r1" class="bar"></label>
+              <label for="r2" class="bar"></label>
+              <label for="r3" class="bar"></label>
+      
+            </div>
+    </div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+
+</body>
+</html>
